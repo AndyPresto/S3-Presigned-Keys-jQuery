@@ -2,7 +2,24 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<input type="hidden" id="ResultPresignedS3Url" />
+<input type="hidden" id="ResultFilename" />
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <div class="custom-file">
+                <p id="presignedUrlToDisplay"></p>
+                <input type="file" class="custom-file-input" id="inputFile" name="AdVideo" accept=".mp4,.mkv,.webm">
+                <label class="custom-file-label" for="AdVideo" id="inputFileLabel" data-english="Choose file">Chọn tệp</label>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 offset-md-3" id="progressNumberArea" >
+            <div><span data-english="Uploading: ">Uploading: </span><span id="progressNumber"></span></div>
+        </div>
+
+        <div class="col-12 col-md-6 offset-md-3 mt-4">
+            <button id="saveVideoButton" type="button" class="btn btn-primary" data-english="Save Video" disabled>Save Video</button>
+        </div>
+    </div>
 </div>
